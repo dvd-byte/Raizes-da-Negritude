@@ -1,0 +1,94 @@
+    /* --- ESTILO GERAL --- */
+    .pagina-atualidade body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      --card:#ad4220;    /* fundo cards */
+      --logo: white;   /* cor do texto da logo */
+      --brand: #d9b84a;  /* cor do quadrado da casinha */
+      --accent:linear-gradient(180deg, #362219 0%, #ad4220 100%);
+      --dark: #f8f4ef;
+    }
+
+    .pagina-atualidade header {
+      background: var(--accent);
+      color: var(--dark);
+      text-align: center;
+      padding: 30px 15px;
+      margin-bottom: 40px;
+      border-radius: 15px;
+      border-left: 6px solid var(--brand);
+    }
+
+    .pagina-atualidade header h1 {
+      font-size: 2.5rem;
+      font-weight: 750;
+      letter-spacing: -0.7px
+    }
+
+    .pagina-atualidade header p {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+    }
+
+    .pagina-atualidade nav {
+      background-color: var(--card);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .pagina-atualidade nav a {
+      color: var(--brand);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .pagina-atualidade nav a:hover {
+      color: var(--accent);
+    }
+
+    .pagina-atualidade section {
+      padding: 15px 20px 35px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: var(--card);
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      border-left: 6px solid var(--brand);
+    }
+
+    .pagina-atualidade section h2 {
+      color: var(--brand);
+      padding-left: 12px;
+      font-size: 30px;
+      font-weight: 780;
+      letter-spacing: -0.6px;
+    }
+
+    .pagina-atualidade section p{
+      color: var(--dark);
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      text-align: justify;
+    }
+
+    /* Animação suave */
+    .pagina-atualidade section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease-out;
+    }
+
+    .pagina-atualidade section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }

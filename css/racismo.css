@@ -1,0 +1,143 @@
+.pagina-racismo * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .pagina-racismo {
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    color: #f2f2f2;
+    line-height: 1.6;
+    padding: 20px;
+      --bg:#2c1b12;      /* fundo principal */
+      --dark: #f8f4ef;     /* cor do texto geral */
+      --accent:linear-gradient(180deg, #362219 0%, #ad4220 100%);  /* hero */
+      --muted:white;   /* footer... */
+      --card:#1f4e2f;    /* fundo cards */
+      --card2:#e86f3e;   /* fundo cards:hover */ 
+      --logo: white;   /* cor do texto da logo */
+      --brand: #d9b84a;  /* cor do quadrado da casinha */
+  }
+
+  .pagina-racismo header {
+    text-align: center;
+    padding: 50px 20px;
+    background: url("../imagens/racismo.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fixed;
+    border-radius: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+  }
+
+  .pagina-racismo header h1 {
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: -0.6px;
+    font-weight: 580;
+    font-size: 60px;
+    text-shadow: 3px 3px 10px black;
+  }
+
+  .pagina-racismo subtitle {
+    font-size: 24px;
+    text-shadow: 4px 4px 11px black;
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .pagina-racismo section {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: var(--card);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  }
+
+  .pagina-racismo .introducao h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: -0.6px;
+  }
+
+  .pagina-racismo .introducao p {
+    font-size: 24px;
+    font-weight: 470;
+    letter-spacing: -0.5px;
+    line-height: 1.35;
+    text-align: justify;
+  }
+
+  .pagina-racismo h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    letter-spacing: -0.6px;
+  }
+
+  .pagina-racismo h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .pagina-racismo p {
+    font-size: 20px;
+    font-weight: 450;
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  .pagina-racismo .timeline {
+    border-left: 3px solid #ffaa06;
+    padding-left: 20px;
+    margin-left: 15px;
+  }
+
+  .pagina-racismo .timeline-item {
+    margin-bottom: 25px;
+  }
+
+  .pagina-racismo .timeline-item h3 {
+    color: #ffaa06;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    margin-bottom: 8px;
+  }
+
+  .pagina-racismo .conclusao h2{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .pagina-racismo .conclusao p{
+    font-size: 24px;
+    font-weight: 470;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
+    text-align: justify;
+  }
+
+  @media (max-width: 600px) {
+    .pagina-racismo header h1 {
+      font-size: 36px;
+    }
+
+    .pagina-racismo section {
+      padding: 20px;
+    }
+
+    .pagina-racismo h2 {
+      font-size: 26px;
+    }
+
+    .pagina-racismo .timeline-item h3 {
+      font-size: 18px;
+    }
+  }

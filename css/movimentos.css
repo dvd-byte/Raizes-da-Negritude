@@ -1,0 +1,175 @@
+.pagina-movimentos * {
+    --incircle: ; /* cor mais interna do circulo */
+    --outcircle: ; /* cor ainda dentro mas na parte externa */
+    --caixa: #ad4220; /* cor dos blocos de conteudo */
+    --seta: ; /* autoexplicativo */
+    --line: ; /* linha da timeline */
+  }
+  
+  .pagina-movimentos {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .pagina-movimentos .evento {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 40px 0;
+  position: relative;
+}
+
+.pagina-movimentos .evento.right {
+  flex-direction: row-reverse;
+}
+
+.pagina-movimentos .img-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagina-movimentos .img-container img {
+  max-width: 100%;
+  width: 400px;
+  height: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+  /* caixa */
+  .pagina-movimentos .content {
+    padding: 20px 30px;
+    background-color: var(--caixa);
+    position: relative;
+    border-radius: 6px;
+    font-size: 17px;
+    text-align: justify;
+  }
+
+    /* posição da caixa */
+  .pagina-movimentos .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    border-radius: 3px;
+  }
+  
+  /* aqui fica a linha vertical da linha do tempo */
+  .pagina-movimentos .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .pagina-movimentos .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #FCAA06;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+  }
+  
+  /* círculos */
+.pagina-movimentos .container::after {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  z-index: 1;
+}
+
+.pagina-movimentos .evento.left .container::after {
+  left: -16px; /* círculo na esquerda da caixa */
+}
+
+.pagina-movimentos .evento.right .container::after {
+  right: -12px; /* círculo na direita da caixa */
+}
+  
+  /* As setas */
+.pagina-movimentos .evento.left::before {
+  content: "";
+  position: absolute;
+  top: 25px;           /* altura da seta */
+  left: 54%;           /* posição vertical */
+  transform: translateX(-100%); /* desloca pra esquerda */
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #B37930; /* cor da caixa */
+  z-index: 2;
+}
+
+/* Seta do evento da direita (aponta pra esquerda) */
+.pagina-movimentos .evento.right::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 46%;
+  transform: translateX(0); /* alinhamento pra direita */
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #B37930; /* cor */
+  z-index: 2;
+}
+  
+  /* p limitar o tamanho da caixa */
+  @media screen and (max-width: 600px) {
+    
+    /* Linha do tempo centralizada */
+  .pagina-movimentos .timeline::after {
+    left: 31px;
+  }
+
+  /* Faz os blocos ficarem em coluna e centralizados */
+  .pagina-movimentos .evento {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajusta container e imagem para ocupar quase toda a largura */
+  .pagina-movimentos .container,
+  .pagina-movimentos .img-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* Ajusta os círculos no topo da caixa */
+  .pagina-movimentos .container::after {
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Ajusta as setas para apontarem para o topo (linha do tempo) */
+  .pagina-movimentos .evento.left::before,
+  .pagina-movimentos .evento.right::before {
+  top: -20px; /* acima da caixa */
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #B37930; /* seta pra cima */
+  z-index: 2;
+}
+
+  /* Define a cor da seta pra cada lado */
+  .pagina-movimentos .evento.left::before {
+    border-bottom-color: #B37930;
+  }
+  .pagina-movimentos .evento.right::before {
+    border-bottom-color: #B37930;
+  }
+}

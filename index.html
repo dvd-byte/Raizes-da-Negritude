@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projeto Raizes da negritude</title>
+  <style>
+    /* criação de variaveis usadas em qualquer lugar */
+    :root{
+      --bg:#2c1b12;      /* fundo principal */
+      --dark: #f8f4ef;     /* cor do texto geral */
+      --accent:linear-gradient(180deg, #362219 0%, #ad4220 100%);  /* hero */
+      --muted:white;   /* footer... */
+      --card:#ad4220;    /* fundo cards */
+      --card2:#e86f3e;   /* fundo cards:hover */ 
+      --logo: white;   /* cor do texto da logo */
+      --brand: #d9b84a;  /* cor do quadrado da casinha */
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* reseta o padding e o margin */
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      background: url("imagens/fundo2.jpeg") center center / cover no-repeat fixed;
+      background-attachment: fixed;
+      color:var(--dark);
+      /* isso aq suaviza as fontes em todos os navegadores */
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* oq aparece na tela (conteudo) */
+    .main{
+      flex: 1;
+      color: white;
+      text-align: left;
+      padding: 25px;
+    }
+    
+    /* codigo pra centralizar todos os blocos */
+    .wrap{
+      /* evita q fique muito esticado dependendo da resolução (limitando a 100px) */
+      max-width:1000px;
+      /* auto pra centralizar automaticamente */
+      margin:18px auto;
+      padding:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand:hover{
+      cursor: pointer;
+    }
+
+    .logo{
+      padding-bottom: 10px;
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--brand),#7a4b2a);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size: 48px;
+      color:#2a1f1f;
+      box-shadow:0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    /* intro do site */
+    .hero{
+      max-width: 900px;
+      margin-top:0px;
+      padding:30px;
+      border-radius:14px;
+      background:var(--accent);
+      display:flex;
+      flex-direction: column;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      text-align: center;
+    }
+
+    .hero .txt h1{
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin:0 0 10px;
+      font-size:32px;
+    }
+
+    .hero .txt p{
+      letter-spacing: -0,7px;
+      line-height: 1.2;
+      font-weight: 300;
+      font-size: 18px;
+      margin:12px 0;
+      color:var(--dark);
+    }
+
+    .hero .actions{
+      margin-top:12px;
+    }
+
+    /* tabela para os cards */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+
+    /* botoes de link*/
+    .card{
+      background:var(--card);
+      padding:12px;
+      margin: 10px;
+      margin-bottom: 2px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    /* interação do botao */
+    .card:hover{
+      font: arial;
+      background-color: var(--card2);
+      color: #EF8666;
+      transition: 0.5s;
+      cursor: pointer;
+      align-items: center;
+      transform: scale(1.1);
+    }
+
+    /* titulos no card */
+    .card h3{
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+      margin: 0 0 2px 0;
+      margin-top: 0;
+
+      color:var(--dark);
+    }
+
+    /* txt no card */
+    .card p{
+      color:var(--dark);
+      letter-spacing: -0,9px;
+      line-height: 1.25;
+      font-weight: 400;
+      font-size:16px;
+    }
+
+    /* rodape */
+    footer{
+      margin:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    /* bgl p celular */
+    @media (max-width:760px){
+      .grid{
+        grid-template-columns:1fr
+      }
+      
+      .hero{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+
+      <div  onclick="voltarhome()">
+        <div class="brand">
+          <div class="logo">&#x2302;</div>
+            <div>
+              <div style="font-weight:800;color:var(--logo)";>Raízes da Negritude</div>
+              <div style="font-size:13px;color:var(--logo)">ETEC Raposo Tavares — Projeto 10/11-14/11</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main" id="conteudo">
+      <section class="hero">
+        <div class="txt">
+          <h1>Valorizando história e cultura</h1>
+          <p>Um espaço feito pelo 1DS para trazer educação, memória e respeito. Explore e aprenda mais com nossas pesquisas e uma prévia do nosso jogo.</p>
+        </div>
+      </section>
+
+      <div class="grid">
+
+        <div onclick="carregar('historia.html')">
+          <article class="card" id="história">
+            <h3>História</h3>
+            <p>Acompanhe a História da Consciência Negra — uma jornada que está repleta de <strong>lutas e cicatrizes.</strong> </p>
+          </article>
+        </div>
+
+        <div onclick="carregar('cultura.html')">
+          <article class="card" id="cultura">
+            <h3>Cultura Negra</h3>
+            <p>Música, Danças, Gastronomia e Religiosidade. Saiba como elas moldaram a comunidade negra no Brasil.</p>
+          </article>
+        </div>
+
+        <div onclick="carregar('personalidades.html')">
+          <article class="card" id="personalidades">
+            <h3>Personalidades</h3>
+            <p>Perfis curtos de figuras mundialmente famosas — Pelé, Mano Brown, Nelson Mandela entre outros.</p>
+          </article>
+        </div>
+
+        <div onclick="carregar('galeria.html')">
+          <article class="card" id="galeria">
+            <h3>Galeria da Arte Negra</h3>
+            <p>Separamos as principais obras de alguns dos artistas negros mais importantes do Passado e da Atualidade.</p>
+          </article>
+        </div>
+
+        <div onclick="carregar('atualidade.html')">
+          <article class="card" id="atualidade">
+            <h3>Atualidade</h3>
+            <p>Você já parou para pensar em como a Consciência Negra influencia nosso dia-a-dia atualmente?</p>
+          </article>
+        </div>
+
+        <div onclick="carregar('racismo.html')">
+          <article class="card" id="racismo">
+            <h3>Racismo Estrutural</h3>
+            <p>Expressões herdadas da Época da Escravidão que devemos Substituir ou Evitar totalmente.</p>
+          </article>
+        </div>
+
+        <div onclick="carregar('moves.html')">
+          <article class="card" id="movimentos">
+            <h3>Movimentos Negros</h3>
+            <p>Uma timeline explicativa abordando os movimentos negros mais marcantes pela luta contra o racismo.</p>
+          </article>
+        </div>
+
+        <div onclick="carregar('jogo.html')">
+          <article class="card" id="jogo">
+            <h3>Jogo</h3>
+            <p>Conheça um pouco do nosso jogo comemorativo — feito especialmente para essa data tão importante!</p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Página criada com fins escolares – Última atualização: novembro de 2025
+  </footer>
+
+ <script>
+
+    //pra ele guardar o conteudo original e poder voltar pra pagina principal      
+    const conteudo = document.getElementById("conteudo");
+    const conteudoOriginal = conteudo.innerHTML;
+    // esse getElementById serve p escolher onde o conteudo das paginas vai explodir 
+    const injected_css_id = "css-pagina";                   
+    // esse async é p ele dar um tempo pra cada etapa do function funcionar antes de seguir
+    //  p etapa seguinte
+    const injected_js_id = "js-pagina"
+    async function carregar(pagina) {
+
+    conteudo.innerHTML = "<p>Carregando...</p>";
+      try {
+        // esse bgl vai busacr o arquivo externo p explodir na tela principal
+        const resposta = await fetch(pagina);
+                 
+        // vai pegar o conteudo da pag que ele foi atras e guarda nessa
+        const html = await resposta.text();
+                 
+        // esse bgl carrega o conteudo guardado nessa pag
+        conteudo.innerHTML = html;
+
+        const nomePagina = pagina.replace(".html", "");
+        await carregarCss (nomePagina);
+
+        await carregarJS (nomePagina);
+      } 
+      // aq é p se der erro ele mostrar a msg q fiz na div
+      catch (erro) {
+        conteudo.innerHTML = "<p style='color:red'>Erro ao carregar a página.</p>";
+      }
+    }
+               
+    function voltarhome() {
+      conteudo.innerHTML = conteudoOriginal
+      const cssAntigo = document.getElementById(injected_css_id);
+      const jsAntigo = document.getElementById(injected_js_id);
+      if (cssAntigo) cssAntigo.remove();
+      if (jsAntigo) jsAntigo.remove();
+    }
+
+    function carregarCss(nomePagina){
+      return new Promise((resolve) => {
+        const Cssantigo = document.getElementById(injected_css_id);
+        if (Cssantigo) Cssantigo.remove();
+
+        const href = `css/${nomePagina}.css`;
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        link.id = injected_css_id;
+        
+        link.onload = () => resolve();
+        link.onerror = () => {
+          console.warn("CSS da página não encontrado", href);
+          resolve();
+        };
+        document.head.appendChild(link);
+      });
+    }
+
+    function carregarJS(nomepagina){
+        return new Promise((resolve) => {
+          const JSantigo = document.getElementById(injected_js_id);
+          if (JSantigo) JSantigo.remove();
+          
+          const script = document.createElement("script")
+          script.src = `js/${nomepagina}.js?${Date.now()}`;
+          script.async = false;
+          script.id = injected_js_id;
+
+          script.onload= () => resolve();
+          script.onerror= () => {
+            console.warn(`Js da página não encontrado: js/${nomePagina.js}`);
+            resolve();
+          };
+
+          document.body.appendChild(script);
+          document.body.removeChild(script);
+          document.body.appendChild(script);
+        });
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+.pagina-historia * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .pagina-historia {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  .pagina-historia header {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('https://www.institutoclaro.org.br/educacao/wp-content/uploads/sites/2/2020/10/GettyImages-896594292-Convertido.png') no-repeat center center/cover;
+    border-radius: 15px;
+    color: #fff;
+  }
+
+  .pagina-historia header h1 {
+    font-size: 60px;
+    text-shadow: 3px 3px 10px black;
+  }
+
+  .pagina-historia .subtitle {
+    font-size: 18px;
+    text-shadow: 4px 4px 11px black;
+  }
+
+  .pagina-historia section {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #b81919;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    color: white;
+  }
+
+  .pagina-historia h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ffaa06;
+    padding-left: 15px;
+  }
+
+  .pagina-historia p, li {
+    font-size: 20px;
+    margin-bottom: 15px;
+    letter-spacing: -0,3px;
+  }
+
+  .pagina-historia ul {
+    padding-left: 20px;
+    font-size: 20px;
+    letter-spacing: -0,5px;
+  }
+
+  .pagina-historia .timeline {
+    border-left: 3px solid #ffaa06;
+    padding-left: 20px;
+  }
+
+  .pagina-historia .timeline-item {
+    margin-bottom: 25px;
+  }
+
+  .pagina-historia .timeline-item h3 {
+    color: #ffaa06;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0,5px;
+  }
+
+  @media (max-width: 600px) {
+    .pagina-historia header h1 {
+      font-size: 36px;
+    }
+
+    .pagina-historia section {
+      padding: 20px;
+    }
+
+    .pagina-historia h2 {
+      font-size: 26px;
+    }
+
+    .pagina-historia .timeline-item h3 {
+      font-size: 18px;
+    }
+  }

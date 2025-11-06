@@ -1,0 +1,120 @@
+  .pagina-moves body {
+  font-family: Arial, sans-serif;
+  --card: #ad4220;
+  --brand: #d9b84a;
+}
+
+  .pagina-moves header {
+  background: var(--accent); 
+  padding: 40px 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 0 auto 50px auto;
+  max-width: 900px;
+  color: var(--dark);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+  border-bottom: 6px solid var(--brand);
+}
+
+  .pagina-moves header h1 {
+  font-size: 40px;
+  font-weight: 760;
+  letter-spacing: -0.5px;
+}
+
+  .pagina-moves .timeline {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+  .pagina-moves .timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 100%;
+  background: #d29d33; /* linha dourada */
+  border-radius: 10px;
+}
+
+  .pagina-moves .evento {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 60px 0;
+  position: relative;
+}
+
+  .pagina-moves .evento img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+  .pagina-moves .evento .conteudo {
+  width: 45%;
+  background: var(--card);
+  padding: 20px;
+  border-left: 5px solid #d29d33;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+  .pagina-moves .evento h2 {
+  color: var(--brand);
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 760;
+  letter-spacing: -0.5px;
+}
+
+  .pagina-moves .evento ul {
+  list-style: none;
+  padding: 0;
+}
+
+  .pagina-moves .evento li {
+  margin-bottom: 8px;
+  line-height: 1.25;
+  text-align: justify;
+  font-size: 22px;
+  letter-spacing: -0.4px;
+}
+
+/* alterna lados */
+  .pagina-moves .evento.esquerda {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+  .pagina-moves.evento.esquerda .conteudo {
+  border-left: none;
+  border-right: 5px solid #d29d33;
+}
+
+  .pagina-moves strong {
+    font-size: 23px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .pagina-moves .timeline::before {
+    left: 8px;
+  } 
+  .pagina-moves .evento {
+    flex-direction: column;
+    text-align: center;
+  }
+  .pagina-moves .evento .conteudo, .pagina-moves .evento img {
+    width: 100%;
+  }
+  .pagina-moves .evento.esquerda .conteudo {
+    border-right: none;
+    border-left: 5px solid #d29d33;
+  }
+}

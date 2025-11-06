@@ -1,0 +1,123 @@
+    .pagina-galeria body {
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        text-align: center;
+        --bg:#2c1b12;      /* fundo principal */
+      --dark: #f8f4ef;     /* cor do texto geral */
+      --accent:linear-gradient(180deg, #362219 0%, #ad4220 100%);  /* hero */
+      --muted:white;   /* footer... */
+      --card:#ad4220;    /* fundo cards */
+      --card2:#e86f3e;   /* fundo cards:hover */ 
+      --logo: white;   /* cor do texto da logo */
+      --brand: #d9b84a;  /* cor do quadrado da casinha */
+    }
+
+    .pagina-galeria header {
+        padding: 20px;
+        background: var(--accent);
+        border-bottom: 3px solid var(--brand);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        animation: brilho 4.3s infinite alternate;
+        border-radius: 12px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    @keyframes brilho {
+        from {
+            box-shadow: 0 0 15px rgba(59, 136, 136, 0.5);
+        }
+
+        to {
+            box-shadow: 0 0 30px rgba(217, 184, 74, 1);
+        }
+    }
+
+    .pagina-galeria h1 {
+        margin: 0;
+        font-size: 2.8em;
+        color: var(--dark);
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        letter-spacing: 2px;
+    }
+
+    .pagina-galeria header p {
+        font-size: larger;
+        margin-top: 8px;
+        color: #fff;
+        font-style: italic;
+        opacity: 0.9;
+    }
+
+    .pagina-galeria .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        padding-bottom: 224px;
+    }
+
+    .pagina-galeria .obra {
+        background-color: var(--bg);
+        border: 2px solid var(--brand);
+        border-radius: 10px;
+        overflow: hidden;
+        width: 250px;
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+    }
+
+    .pagina-galeria .obra:hover {
+        transform: scale(1.05);
+    }
+
+    .pagina-galeria .obra img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .pagina-galeria .descricao {
+        position: relative;
+        padding: 10px;
+        min-height: 120px;
+        transition: opacity 0.3s;
+    }
+
+    .pagina-galeria .descricao p {
+        margin: 0;
+        transition: opacity 0.3s;
+    }
+
+    .pagina-galeria .obra:hover .descricao p {
+        opacity: 0;
+    }
+
+    .pagina-galeria .descricao::after {
+        content: "";
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        color: #fff;
+        font-size: 0.9em;
+        line-height: 1.4em;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s;
+    }
+
+    .pagina-galeria .obra:hover .descricao::after {
+        content: attr(data-hover);
+        opacity: 1;
+        visibility: visible;
+    }

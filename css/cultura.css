@@ -1,0 +1,174 @@
+.pagina-cultura *{
+    box-sizing: border-box;
+}
+
+.pagina-cultura{
+    margin:0;
+    -webkit-font-smoothing:antialiased;
+    font-family: Arial, Helvetica, sans-serif;
+    --samba: #d9593d;
+    --sambaH: #f17d5b;
+    --rap: #b8422a;
+    --rapH: #d75a41;
+    --funk: #ad4220;
+    --funkH: #c44f24;
+    --capoeira: #d9b84a;
+    --capoeiraH: #f4d46e;
+    --jongo: #e0a13a;
+    --jongoH: #f1c15f;
+    --candomble: #6b4b9c;
+    --candombleH: #8b6ed1;
+    --umbanda: #8b6ed1;
+    --umbandaH: #b59cee;
+    --feijoada: #29695c;
+    --feijoadaH: #3a8a7a;
+    --acaraje: #3b7a6b;
+    --acarajeH: #4c9b84;
+    --brand: #d9b84a;
+    --dark: #f8f4ef;
+    --titulo: linear-gradient(180deg, #362219 0%, #ad4220 100%);
+}
+
+.pagina-cultura .bloco {
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+.pagina-cultura .bloco:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.pagina-cultura .bloco:not(:hover){
+    transform: scale(1);
+    transition: 0.25s;
+}
+
+.pagina-cultura .bloco img{
+    border-radius: 15px;
+    width:240px;
+    height:220px;
+    object-fit: cover;
+    border: 3px solid rgba(0,0,0,0.2);
+}
+
+.pagina-cultura .conteudo h3{
+    font-weight: 600;
+    margin-left:3px;
+    text-align: left;
+    font-size: 36px;
+    margin-top: 8px;
+    letter-spacing: -0.6px;
+}
+
+.pagina-cultura .conteudo p {
+  font-size: 24px;
+  color: var(--dark);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+  text-align: justify;
+  margin-right: 8px;
+}
+
+.pagina-cultura .samba{
+    background: var(--samba);
+}
+
+.pagina-cultura .samba:hover{
+    background-color: var(--sambaH);
+}
+
+.pagina-cultura .rap{
+    background: var(--rap);
+}
+
+.pagina-cultura .rap:hover{
+    background-color: var(--rapH);
+}
+
+.pagina-cultura .funk{
+    background: var(--funk);
+}
+
+.pagina-cultura .funk:hover{
+    background-color: var(--funkH);
+}
+
+.pagina-cultura .capoeira{
+    background:var(--capoeira);
+}
+
+.pagina-cultura .capoeira:hover{
+    background-color: var(--capoeiraH);
+}
+
+.pagina-cultura .jongo{
+    background:var(--jongo);
+}
+
+.pagina-cultura .jongo:hover{
+    background-color: var(--jongoH);
+}
+
+.pagina-cultura .candomble{
+    background: var(--candomble);
+}
+
+.pagina-cultura .candomble:hover{
+    background-color: var(--candombleH);
+}
+
+.pagina-cultura .umbanda{
+    background: var(--umbanda);
+}
+
+.pagina-cultura .umbanda:hover{
+    background-color: var(--umbandaH);
+}
+
+.pagina-cultura .feijoada{
+    background: var(--feijoada);
+}
+
+.pagina-cultura .feijoada:hover{
+    background-color: var(--feijoadaH);
+}
+
+.pagina-cultura .acaraje{
+    background: var(--acaraje);
+}
+
+.pagina-cultura .acaraje:hover{
+    background-color: var(--acarajeH);
+}
+
+.pagina-cultura .title{
+    padding: 5px;
+    width: 70%;
+    height: 100%;
+    background: var(--titulo);
+    box-shadow: 0px 3px 40px rgb(0, 0, 0);
+    margin: 0 auto;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.pagina-cultura h1{
+    font-size: 50px;
+    letter-spacing: -0.5px;
+    font-weight: 760;
+}
+
+.pagina-cultura h2{
+    font-size:4rem;
+    text-align: center;
+    padding:1px;
+    margin-top: 1px;
+    margin-bottom:15px;
+}

@@ -1,0 +1,119 @@
+.pagina-personalidades {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  --card:#ad4220;    /* fundo cards */
+  --card2:#e86f3e;   /* fundo cards:hover */ 
+  --dark: #f8f4ef;     /* cor do texto geral */
+  --brand: #d9b84a;  /* bordas dos cards */
+  --accent:linear-gradient(180deg, #362219 0%, #ad4220 100%);  /* titulo */
+  }
+
+  .titulo {
+  background: var(--accent); 
+  padding: 40px 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 0 auto 50px auto;
+  max-width: 900px;
+  color: var(--dark);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+  border-left: 6px solid var(--brand);
+}
+
+.titulo h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  color: var(--dark);
+  margin-top: -8px;
+}
+
+.titulo p {
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+  .pagina-personalidades .personal-item{
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 15px;
+    backdrop-filter: blur(4px);
+    border-left: 6px solid var(--brand);
+  }
+
+  .pagina-personalidades .personal-item:hover{
+    background: var(--card2);
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .pagina-personalidades .personal-item:not(:hover){
+    background: var(--card);
+    transform: scale(1);
+    transition: 0.4s;
+  }
+
+  .pagina-personalidades .personal-img{
+    width: 180px;
+    height: 240px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .pagina-personalidades .personal-info h2{
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0,3px;
+  }
+
+  .pagina-personalidades .personal-info p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: var(--dark);
+  }
+
+  .pagina-personalidades .personal-info ul{
+    font-size: 15px;
+    padding-left: 18px;
+    line-height: 1.55;
+  }
+
+  .pagina-personalidades .personal-info li{
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 700px) {
+  .personal-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .personal-info ul {
+    text-align: left; 
+  }
+  .secao-titulo {
+    padding: 30px 18px;
+    border-radius: 10px;
+  }
+
+  .secao-titulo h1 {
+    font-size: 26px;
+  }
+
+  .secao-titulo p {
+    font-size: 15px;
+  }
+}
