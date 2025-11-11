@@ -347,6 +347,7 @@
           script.src = `js/${nomepagina}.js?${Date.now()}`;
           script.async = false;
           script.id = injected_js_id;
+          script.type = "module";
 
           script.onload= () => resolve();
           script.onerror= () => {
@@ -355,10 +356,9 @@
           };
 
           document.body.appendChild(script);
-          document.body.removeChild(script);
-          document.body.appendChild(script);
         });
       }
   </script>
 </body>
 </html>
+
