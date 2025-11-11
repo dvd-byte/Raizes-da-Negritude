@@ -1,0 +1,109 @@
+    .pagina-jogo .container { 
+    padding: 10px 20px;
+    width: 100%;
+    background-color: var(--card);
+    box-shadow: 0px 3px 40px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    margin: 0 auto 40px auto;
+    justify-content: center;
+}
+
+
+    .pagina-jogo .container-video { 
+    padding: 20px;
+    width: 75%;
+    background-color: var(--card);
+    box-shadow: 0px 3px 40px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    margin: 0 auto 40px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+    .pagina-jogo body{
+    --brand: #e47e09;
+    --dark: #f8f4ef;     /* cor do texto geral */
+    --accent:linear-gradient(180deg, #362219 0%, #ad4220 100%);  /* hero */
+    --muted:white;   /* footer... */
+    --card:#ad4220;    /* fundo cards */
+    --card2:#e86f3e;   /* fundo cards:hover */ 
+    --logo: white;   /* cor do texto da logo */
+    --brand: #d9b84a;  /* cor do quadrado da casinha */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pagina-jogo .title{
+    padding: 5px 10px;
+    width:50%;
+    height: 100%;
+    background: var(--accent);
+    box-shadow: 0px 3px 40px rgb(0, 0, 0);
+    margin: 0 auto;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    
+}
+
+/* titulo header*/
+.pagina-jogo h1{
+    font-size: 48px;
+    color: var(--dark);
+    padding: 3px;
+    text-align: center;
+}
+
+/* nome da sessão */
+.pagina-jogo h2{
+    font-size: 36px;
+    color: var(--dark);
+    padding:1px;
+    margin-top: 1px;
+    margin-bottom:15px;
+}
+
+/* titulo do conteudo */
+.pagina-jogo h3{
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: var(--dark);
+}
+
+/* texto do conteudo */
+.pagina-jogo p{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    text-align: justify;
+    color: var(--dark);
+}
+
+.pagina-jogo .conteudo {
+    display: flex;
+    align-items: center; /* centraliza verticalmente */
+    gap: 2px; /* espaço entre imagem e texto */
+    flex-direction: column;
+    margin: 10px;
+}
+
+.pagina-jogo img {
+    width: 280px; /* ajuste o tamanho conforme quiser */
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    margin-top: 20px;
+}
+
+.pagina-jogo embed{
+     width: 600px; /* ajuste o tamanho conforme quiser */
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+}
