@@ -125,19 +125,66 @@
   }
 
   @media (max-width: 600px) {
-    .pagina-racismo header h1 {
-      font-size: 36px;
-    }
 
-    .pagina-racismo section {
-      padding: 20px;
-    }
-
-    .pagina-racismo h2 {
-      font-size: 26px;
-    }
-
-    .pagina-racismo .timeline-item h3 {
-      font-size: 18px;
-    }
+  .pagina-racismo {
+    padding: 10px;
   }
+
+  /* HEADER */
+  .pagina-racismo header {
+    height: auto;
+    padding: 30px 15px;
+    background-size: cover; /* NÃO USA fixed no celular */
+    border-radius: 12px;
+  }
+
+  .pagina-racismo header h1 {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .pagina-racismo subtitle {
+    font-size: 18px;
+  }
+
+  /* CARDS / SECTIONS */
+  .pagina-racismo section {
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 12px;
+  }
+
+  /* TITULOS */
+  .pagina-racismo .introducao h1,
+  .pagina-racismo h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .pagina-racismo h2 {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+
+  /* PARÁGRAFOS */
+  .pagina-racismo p {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  /* TIMELINE */
+  .pagina-racismo .timeline {
+    border-left: 3px solid #ffaa06;
+    padding-left: 12px;
+    margin-left: 0;
+  }
+
+  .pagina-racismo .timeline-item {
+    margin-bottom: 20px;
+  }
+
+  .pagina-racismo .timeline-item h3 {
+    font-size: 23px;
+    margin-bottom: 5px;
+  }
+}
