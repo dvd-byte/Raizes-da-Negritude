@@ -121,3 +121,15 @@
         opacity: 1;
         visibility: visible;
     }
+
+@media (max-width: 600px) {
+        header {
+            width: 100%;
+            text-align: center;
+        }
+
+        .obra {
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
